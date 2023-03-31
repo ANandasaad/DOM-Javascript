@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(185, 239, 221);
+}
+
+h1{
+    text-align: center;
+    color: brown;
+    margin: 20px 30px;
+}
+.todo-form{
+   text-align: center;
+
+}
+.todo-input{
+    width: 40rem;
+    height: 3rem;
+    border-radius: 4px;
+    padding-left: 5px;
+    background-color: white;
+}
+.add-button{
+    padding: 1rem 1rem;
+    border-radius: 4px;
+    background-color: palegoldenrod;
+}
+.add-button:hover{
+    cursor: pointer;
+    transform: scale(.9);
+    transition: .3s;
+}
+.todo-items{
+    text-align: center;
+  
+}
+.item{
+    font-size: 20px;
+    
+   
+}
+.delete-button{
+    margin: 30px;
+    font-size: 30px;
+    padding: 8px;
+    border-radius: 5px;
+    
+}
+.delete-button:hover{
+    cursor: pointer;
+}

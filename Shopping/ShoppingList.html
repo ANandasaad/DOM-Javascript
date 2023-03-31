@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="ShoppingList.js" defer></script>
+    <title>Shopping List</title>
+  </head>
+  <body>
+    <section>
+      <input type="text" placeholder="Item name" id="item-name-input" />
+      <input type="number" placeholder="Price" id="item-price-input" />
+      <button id="btn">Add Item</button>
+    </section>
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="Item-list">
+          <tr>
+            <td>Total Grand</td>
+            <td id="total-grand">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Fragment</title>
+</head>
+<body>
+    <ul id="language"></ul>
+    <div id="div">
+
+    </div>
+    <script>
+        let languages=["JS","JAVA","TYPESCRIPT","ELM","DART","SCALA"];
+        const LanEL=document.getElementById('language');
+        let Fragment=new DocumentFragment();
+        languages.forEach((e)=>{
+            const li=document.createElement("li");
+            li.innerHTML=e;
+            Fragment.appendChild(li);
+        })
+        LanEL.appendChild(Fragment);
+
+
+        const div=document.querySelector('#div');
+    //This is not efficent way to do that-----------///
+        // for(let i=0;i<100;i++)
+        // {
+        //     const p=document.createElement('p');
+        //     p.textContent=`para${i}`;
+        //     console.log(p);
+        //     div.appendChild(p);
+        // }
+
+
+
+        let frag=new DocumentFragment();
+        for(let i=0;i<5;i++)
+        {
+            const p=document.createElement('p');
+            p.textContent=`para${i}`;
+            
+            frag.appendChild(p);
+            console.log(frag);
+        }
+        div.appendChild(frag);
+
+
+    </script>
+</body>
+</html>

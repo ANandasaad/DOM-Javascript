@@ -1,0 +1,39 @@
+*{
+   
+    background-color: black;
+    color:white
+}
+
+.header{
+    width: 100%;
+    text-align: center; 
+}
+.middle{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+   
+}
+img{
+    position: relative;
+    width: 328px;
+ 
+ 
+    
+}
+
+.middle>p{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 54px;
+}
+.bio{
+    margin: 10px 109px;
+}
+.bio>h1{
+    font-size: 45px;
+}
+.bio>p{
+    font-size: 30px;
+}

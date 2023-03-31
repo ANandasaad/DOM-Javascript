@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating Element</title>
+</head>
+<body>
+    <h1 id="h1">Hello</h1>
+    <ul id="list">
+        <li>Angular</li>
+            <li>Vue</li>
+    </ul>
+
+    <div id="div">
+      <p>Para</p>
+
+    </div>
+    <script>
+        const h=document.querySelector('#h1');
+        const p=document.createElement('p');
+        p.innerText="Para";
+        h.after(p);
+
+        const list=document.querySelector('#list');
+        const item=["Java","Javascript","HTML"];
+        item.forEach((items)=>{
+            const li=document.createElement('li');
+            li.innerHTML=items;
+            return li;
+        })
+        list.lastChild.after(...item);
+
+        const div=document.getElementById("div");
+        const para=document.createElement("p");
+        para.textContent="Para1";
+        
+        div.insertBefore(para,div.firstElementChild);
+       
+    </script>
+</body>
+</html>

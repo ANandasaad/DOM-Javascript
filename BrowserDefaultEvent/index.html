@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Default Events</title>
+</head>
+<body>
+    <a href="https://javascript.info/default-browser-action" onclick="return false">Click Me</a>
+    <a href="https://www.codingninjas.com/codestudio/problem-lists/love-babbar-dsa-sheet-problems?practice_topic[]=Dynamic%20Programming&category[]=Advanced%20Algorithms&sort_entity=reactions_count&sort_order=DESC" onclick="event.preventDefault()
+    ">Click</a>
+
+
+
+     <input type="text" value="FocusWorks" onfocus="this.value=''">
+     <input type="text" value="Clicke me" onmousedown="return false" onfocus="this.value='' ">
+
+
+
+     <p>Right button Click</p>
+     <button id="elem">Right Button Click Event</button>
+
+     <script>
+        elem.oncontextmenu=function(e)
+        {
+            e.preventDefault();
+           
+            // e.stopPropagation(); not a good way to prevent rightclick
+            
+            console.log("button clicked")
+        };
+
+        document.oncontextmenu=function(e)
+        {
+            if(e.preventDefault) return;
+            e.preventDefault();
+            
+            console.log("document clicked");
+        }
+     </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get All siblings</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>Products</li>
+        <li class="current">Customer Support</li>
+        <li>Careers</li>
+        <li>Investors</li>
+        <li>News</li>
+        <li>About Us</li>
+    </ul>
+    <script>
+    let current = document.querySelector('.current');
+let nextSibling = current.nextElementSibling;
+
+while(nextSibling) {
+    console.log(nextSibling.textContent);
+    nextSibling = nextSibling.nextElementSibling;
+}
+
+let pev=document.querySelector('.current');
+let prevSibling=pev.previousElementSibling;
+while(prevSibling)
+{
+    console.log(prevSibling.textContent);
+    prevSibling=prevSibling.previousElementSibling;
+}
+
+const getSiblings=function(e)
+{
+    let arr=[];
+    if(!e.parentNode)
+    {
+        return arr;
+    }
+    let sibling=e.parentNode.firstChild;
+    while(sibling)
+    {
+        if(sibling.nodeType===1 && sibling!==e)
+        {
+            arr.push(sibling);
+        }
+        sibling=sibling.nextSibling;
+    }
+
+    return arr;
+};
+
+
+let siblings=getSiblings(current);
+let allSiblings=siblings.map((e)=>e.innerHTML);
+console.log(allSiblings);
+      
+    </script>
+</body>
+</html>
