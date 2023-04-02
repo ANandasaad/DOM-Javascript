@@ -82,3 +82,25 @@ align-items: center;
     grid-column-end: 12;
     text-align: center;
 }
+
+
+@media only screen and (max-width:600px){
+    .header-container{
+        display: block;
+    }
+    .gallery_header{
+        display: block;
+    }
+    .gallery{
+        display: block;
+        width: 142vw;
+
+    }
+    .gallery_header{
+
+         text-align: center;
+    }
+    .head_title{
+        margin-left: 30px;
+    }
+}

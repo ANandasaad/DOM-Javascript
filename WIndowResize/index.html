@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Resize</title>
+
+</head>
+<body>
+    <section>
+        <div>
+            <h1>Window Resize</h1>
+            <h1>Scroll me</h1>
+            <div id="container"></div>
+        </div>
+    </section>
+    <script>
+        window.addEventListener("resize",function(){
+            console.log(document.documentElement.clientWidth)
+            console.log(window.innerWidth);
+            console.log(document.documentElement.scrollHeight);
+;        })
+
+         window.addEventListener("scroll",function(){
+            document.getElementById("scrolling").innerText=window.scrollY;
+         })
+          function scrolling()
+          {
+            while(true)
+            {
+                let windowRelativeBottom=document.documentElement.getBoundingClientRect().bottom;
+                if(windowRelativeBottom> document.documentElement.clientHeight+100) break;
+                document.getElementById("container").insertAdjacentHTML('beforeend',`<p>Date:${new Date()}</p>`);
+            }
+          }
+         window.addEventListener("scroll",scrolling);
+
+         scrolling();
+
+
+
+      
+    </script>
+</body>
+</html>

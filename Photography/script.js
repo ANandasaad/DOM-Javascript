@@ -10,3 +10,10 @@ ViewBtn.addEventListener("click",function(){
         gallery.style.display="none";
     }
 })
+
+window.scrollBy(0,10);
+
+window.addEventListener('scroll', function() {
+    // document.getElementById('showScroll').innerHTML = window.pageYOffset + 'px';
+    console.log(this.window.scrollY);
+  });
