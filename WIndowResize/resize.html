@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            border: 1px solid black;
+            width: 100%;
+            height: 20vh;
+        }
+        .container{
+            display: flex;
+           
+        }
+    </style>
+    <title>Resize </title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus amet quas ea assumenda maiores esse culpa omnis aliquid perspiciatis. Magnam corporis aperiam voluptates. Recusandae, voluptate inventore sequi doloribus nihil magnam.</p>
+    
+        </div>
+        <div class="box">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, tenetur! Laboriosam saepe exercitationem animi consequatur voluptas voluptatum eum maxime! Beatae eum ea distinctio. Accusamus, modi repellat! Incidunt atque dolore beatae!</p>
+
+        </div>
+
+    </div>
+  
+      
+    </div>
+   
+
+    <script>
+        // const content=document.querySelector('.content');
+        // const div=document.getElementsByTagName('div');
+        // window.addEventListener("resize",()=>{
+        //     const width=window.innerWidth;
+        //     const height=window.innerHeight;
+
+        //     if(width<600)
+        //     {
+        //         content.style.fontSize='24px';
+        //         div.style.display='none';
+
+        //     }
+        //     else if(width<900)
+        //     {
+        //         content.style.fontSize='40px';
+        //     }
+        //     else{
+        //         content.style.fontSize='20px';
+        //     }
+        // })
+
+        const container=document.querySelector('.container');
+        const box=document.querySelector('.box');
+        window.addEventListener('resize',function(){
+            const width=window.innerWidth;
+            if(width<600)
+            {
+                container.style.flexDirection='column';
+                box.style.width='100%';
+                box.style.height='20vh';
+                // container.style.display='none'
+              
+
+            }else{
+                container.style.flexDirection='row';
+                box.style.width='100%';
+                box.style.height='20vh';
+              
+            }
+            
+        })
+
+    </script>
+</body>
+</html>
